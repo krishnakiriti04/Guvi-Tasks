@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Market Place</a></li>
+            <li><a href="jumbotron.html">Jumbotron</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+    <div class="boundary">
+        <form action="#" onsubmit="popup()">
+            <fieldset class="form">
+                <div class="outer">
+                    <div class="label">
+                        <label for="full-name">Full Name</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" name="full-name" id="full-name" placeholder="Full Name" required>
+                    </div>
+                </div>
+                <div class="outer">
+                    <div class="label">
+                        <label for="address-1">Address Line 1</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="far fa-address-book icon"></i>
+                        <input type="text" name="address-1" id="address-1" placeholder="Address Line 1" required>
+                    </div>
+                </div>
+                <div class="outer">
+                    <div class="label">
+                        <label for="address-2">Address Line 2</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="far fa-address-book icon"></i>
+                        <input type="text" name="address-2" id="address-2" placeholder="Address Line 2" required>
+                    </div>
+                </div>
+                <div class="outer">
+                    <div class="label">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="far fa-building icon"></i>
+                        <input type="text" name="city" id="city" placeholder="City" required>
+                    </div>
+                </div>
+                <div class="outer">
+                    <div class="label">
+                        <label for="state">State/Province/Region</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-map-marker-alt icon"></i>
+                        <input type="text" name="state" id="state" placeholder="State/Province/Region" required>
+                    </div>
+                </div>
+                <div class="outer">
+                    <div class="label">
+                        <label for="zip">Postal Code/Zip</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="far fa-envelope-open icon"></i>
+                        <input type="tel" name="zip" id="zip" placeholder="Postal Code/Zip" required>
+                    </div>
+                </div>
+                <div class="outer">
+                    <div class="label">
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-map icon"></i>
+                        <select name="country" id="country" required>
+                            <option value="">---Select Country---</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="outer">
+                    <div class="label">
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-at icon"></i>
+                        <input type="text" name="email" id="email" placeholder="E-mail">
+                    </div>
+                </div>
+                <div class="outer">
+                    <div class="label">
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-mobile-alt icon"></i>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+                    </div>
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Submit">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
