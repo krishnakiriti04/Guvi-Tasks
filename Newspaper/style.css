@@ -1,0 +1,12 @@
+.heading {
+    text-align: center;
+    font-size: 500%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.box {
+    width: 30%;
+    color: aliceblue;
+    background-color: brown;
+    font-family: 'Times New Roman', Times, serif;
+}

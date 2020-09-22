@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rest API testing</title>
+	<script type="text/javascript" src='restcountries.js'></script>
+	<style type="text/css">
+		h1{
+			border: 2px solid;
+			text-align: center;
+			background-color: skyblue;
+			padding-top: 5%; 
+			padding-bottom: 5%; 
+			color: black;
+		}
+		#country,#capital,#region,#currency{
+			border: 1px solid red;
+			width:25%;
+			text-align: center;
+			display: inline-block;
+			padding: 10px 10px 10px 10px;
+		}
+		input,select{
+			text-align: center;
+		}
+		html{
+			background-color: black;
+			color: white;
+			font-family: sans-serif;
+		}
+		div{
+			display: block;
+			padding-bottom: 30px
+		}
+		div label{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Welcome to Rest Countries API testing</h1>
+	</div>
+	<div>
+		<div>
+			<label>Country :</label>
+			<select id="country"></select>
+		</div>
+		<div>
+			<label>Capital :</label>
+			<input type="text" name="capital" id="capital">
+		</div>
+				
+			<div>
+				<label>Currency :</label>
+				<input type="text" name="currency" id="currency">
+			</div>
+			<div>
+				<label>Region :</label>
+				<input type="text" name="region" id="region">
+			</div>
+	</div>
+</body>
+</html>

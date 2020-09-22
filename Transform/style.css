@@ -1,0 +1,88 @@
+.container {
+    width: auto;
+    background-color: black;
+    box-sizing: border-box;
+    outline: 5px solid white;
+    outline-offset: -30px;
+}
+
+.top {
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    font-weight: bold;
+    font-size: x-large;
+    padding-top: 40px;
+}
+
+.bottom {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.boundary {
+    transform: skewY(-3deg);
+}
+
+.section {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    transform: skewY(3deg);
+    font-family: 'Solway', serif;
+    font-weight: bolder;
+}
+
+.one {
+    background-image: url("bg1.jpg");
+    color: black;
+    background-color: rgba(238, 238, 238, 0.637) !important;
+    font-size: large;
+    background-blend-mode: overlay;
+}
+
+.two {
+    background-image: linear-gradient(90deg, rgba(179, 29, 253, 1) 0%, rgba(252, 219, 69, 1) 100%);
+    color: black;
+    background-color: rgba(238, 238, 238, 0.24) !important;
+    font-size: large;
+    background-blend-mode: color;
+    font-weight: bold;
+}
+
+.three {
+    font-size: large;
+    background-image: url("bg3.jpg");
+    font-weight: bold;
+}
+
+.four {
+    font-size: large;
+    color: beige;
+    font-weight: bolder;
+    background-image: url("bg4.jpg");
+    background-color: rgba(238, 238, 238, 0) !important;
+    background-blend-mode: color;
+    font-weight: bold;
+}
+
+.five {
+    font-size: large;
+    background-image: radial-gradient(circle, rgba(174, 199, 238, 1) 20%, rgba(148, 233, 173, 0.9808298319327731) 100%);
+    font-weight: bold;
+}
+
+.six {
+    font-size: large;
+    font-weight: bold;
+    background-image: url("bg6.jpg");
+    background-color: rgba(238, 238, 238, 0.425) !important;
+    background-blend-mode: color;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+}
