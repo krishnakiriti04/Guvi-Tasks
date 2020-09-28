@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Variants Task</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <form action="#">
+            <div class="form-group row">
+                <label for="productName" class="col-form-label col-2">Product Name</label>
+                <div class="col-4">
+                    <input type="text" name="productName" id="productName" class="form-control" placeholder="Product Name">
+                </div>
+                <label for="basePrice" class="col-form-label col-2">Base Price</label>
+                <div class="col-4">
+                    <input type="number" name="basePrice" id="basePrice" class="form-control" placeholder="Price">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="url" class="col-form-label col-2">Image URL</label>
+                <div class="col-4">
+                    <input type="text" name="url" id="url" placeholder="Image URL" class="form-control">
+                </div>
+                <label for="description" class="col-form-label col-2">Description</label>
+                <div class="col-4">
+                    <input type="text" name="description" id="description" placeholder="Description" class="form-control">
+                </div>
+            </div>
+            <fieldset>
+                <legend>Variants</legend>
+                <button class="btn btn-success" type="button" onclick="addVariant()"><i class="fa fa-plus" aria-hidden="true"></i> Add Variant</button>
+                <div class="form-group" id="variants">
+                </div>
+            </fieldset>
+            <div id="submitVariant" class="text-center">
+                <input type="button" value="Submit Variant" class="btn btn-info" onclick="getVariantDetails()">
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
