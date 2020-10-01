@@ -52,7 +52,7 @@ async function getData() {
             btn.id = "btn-" + index;
             btn.onclick = async function() {
                 try {
-                    var data = await fetch(`https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat=${element.latlng[0]}&lon=${element.latlng[1]}&appid=1b8219db0924bc0ab5c34aa34a8704e2`);
+                    var data = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${element.latlng[0]}&lon=${element.latlng[1]}&appid=1b8219db0924bc0ab5c34aa34a8704e2`);
                     var weatherdata = await data.json();
                     // console.log(element.latlng + ' : ' + weatherdata.coord.lon, weatherdata.coord.lat)
                     climate.innerHTML = (weatherdata.main.temp - 273.15).toFixed(2) + "&#176; C , " + weatherdata['weather'][0].description
