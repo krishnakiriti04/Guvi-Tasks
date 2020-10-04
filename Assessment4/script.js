@@ -76,7 +76,7 @@ window.onload = getData(document.getElementById('home'));
 //function to fetch api data based on the section selected from the nav-bar
 async function getData(e) {
     try {
-        var url = 'http://api.nytimes.com/svc/topstories/v2/' + e.id + '.json?api-key=kK0UVivxKRmeiFiTW4y5yt0PkNEUBok4';
+        var url = 'https://api.nytimes.com/svc/topstories/v2/' + e.id + '.json?api-key=kK0UVivxKRmeiFiTW4y5yt0PkNEUBok4';
         var rawdata = await fetch(url);
         var jsondata = await rawdata.json();
 
