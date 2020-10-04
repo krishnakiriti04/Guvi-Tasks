@@ -1,0 +1,19 @@
+.list-items {
+    border: 0px;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+
+.list-items:hover {
+    color: cornflowerblue !important;
+}
+
+.title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.date {
+    font-family: 'sans-serif'
+}
