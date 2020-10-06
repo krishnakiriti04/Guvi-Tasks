@@ -85,6 +85,7 @@ async function postData() {
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("password").value = "";
+            document.getElementById("confirm-password").value = "";
             document.getElementById('country').value = "";
             document.getElementsByName('Gender').forEach(val => val.checked = false);
             document.getElementsByName('Marital Status').forEach(val => val.checked = false);
