@@ -66,7 +66,7 @@ var PetRequests = /** @class */ (function () {
     };
     PetRequests.prototype.displayRequests = function () {
         console.log(" ");
-        console.log("Pending Requets:");
+        console.log("Pending Requests:");
         for (var _i = 0, _a = this.requestsArray; _i < _a.length; _i++) {
             var request = _a[_i];
             console.log(request);
