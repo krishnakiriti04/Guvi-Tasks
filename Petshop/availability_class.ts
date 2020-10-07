@@ -86,7 +86,7 @@ class PetRequests{
 
     displayRequests(){
         console.log(" ");
-        console.log("Pending Requets:")
+        console.log("Pending Requests:")
         for(let request of this.requestsArray){
             console.log(request);
         }
