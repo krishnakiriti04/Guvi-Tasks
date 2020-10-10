@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #audio {
+            border-radius: 2%;
+            top: 45px;
+            left: 70px;
+            position: relative;
+            height: 242px;
+            width: 334px;
+            background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        }
+        
+        .audio-container {
+            width: 400px;
+            height: 300px;
+        }
+        
+        #playerimg {
+            position: absolute;
+        }
+        
+        .addbg {
+            background-image: url('/bg1.jpg');
+            background-repeat: no-repeat;
+        }
+        
+        .name {
+            opacity: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center text-light addbg">
+            <h1 class='text-light name'>Musix</h1>
+            <h4>Music on the Go!!</h4>
+        </div>
+        <div class="row mt-3 text-center">
+            <div class="offset-md-3 col-md-5 col-sm-10">
+                <input type="text" name="search" id="searchbar" placeholder="Search" class='form-control p-4'>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <button class='btn btn-info p-3'>Search</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-3 col-sm-12 col-xs-12 outer">
+                <img src="player.png" usemap="#image-map" id="playerimg">
+                <div class="audio-container">
+                    <audio id="audio" controls></audio>
+                </div>
+
+                <map name="image-map">
+                    <area target="" alt="menu" title="menu" id='menu' coords="237,333,30" shape="circle">
+                    <area target="" alt="next" title="next" id='next' coords="311,406,30" shape="circle">
+                    <area target="" alt="prev" title="prev" id='prev' coords="164,408,31" shape="circle">
+                    <area target="" alt="play" title="pause/play" id='pauseplay' coords="236,481,34" shape="circle">
+                </map>
+            </div>
+        </div>
+        <div>
+            <h4 id='h4'></h4>
+            <div>
+                <h4 id='playStatus'></h4>
+            </div>
+        </div>
+    </div>
+
+    <script src='player.js'></script>
+</body>
+
+</html>
