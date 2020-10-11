@@ -1,0 +1,27 @@
+.audio {
+    border-radius: 2%;
+    top: 45px;
+    left: 70px;
+    position: relative;
+    height: 242px;
+    width: 334px;
+    background-image: url('/playerbg.jpeg');
+}
+
+.audio-container {
+    width: 400px;
+    height: 300px;
+}
+
+#playerimg {
+    position: absolute;
+}
+
+.addbg {
+    background-image: url('/bg1.jpg');
+    background-repeat: no-repeat;
+}
+
+.name {
+    opacity: 70%;
+}
