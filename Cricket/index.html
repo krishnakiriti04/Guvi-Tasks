@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/1d90ebff98.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="text-center p-3 text-light bg-dark">
+            <h2> CRICKET 2020 <img src="/cricket.png" alt="cricket" height="40"> </h2>
+        </div>
+        <div class="d-flex flex-row justify-content-around mb-3 p-3 border-top border-bottom">
+            <div>
+                <h4 class='text-center'>Team 1 Score</h4>
+                <h4 class='text-center' id='score-1'>0</h4>
+                <div class='text-center'>
+                    <button class="btn btn-info" id='hit-1'>HIT 1</button>
+                </div>
+            </div>
+            <div>
+                <h2 class='text-center mt-4'>TIMER</h2>
+                <h4 class='timer-value text-center text-success' id='timerValue'>44</h4>
+
+            </div>
+            <div>
+                <h4 class='text-center'>Team 2 Score</h4>
+                <h4 class='text-center' id='score-2'>0</h4>
+                <div class='text-center'>
+                    <button class="btn btn-info" id='hit-2'>HIT 2</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="text-center">
+                    <h4>Team 1 Score Board</h4>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Team 1</th>
+                            <th>B1</th>
+                            <th>B2</th>
+                            <th>B3</th>
+                            <th>B4</th>
+                            <th>B5</th>
+                            <th>B6</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='player-1' id='player-1-1'>
+                            <td>Player 1</td>
+                            <td id="t1p1b1"></td>
+                            <td id="t1p1b2"></td>
+                            <td id="t1p1b3"></td>
+                            <td id="t1p1b4"></td>
+                            <td id="t1p1b5"></td>
+                            <td id="t1p1b6"></td>
+                            <td id="t1p1-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-2' id='player-1-2'>
+                            <td>Player 2</td>
+                            <td id="t1p2b1"></td>
+                            <td id="t1p2b2"></td>
+                            <td id="t1p2b3"></td>
+                            <td id="t1p2b4"></td>
+                            <td id="t1p2b5"></td>
+                            <td id="t1p2b6"></td>
+                            <td id="t1p2-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-3' id='player-1-3'>
+                            <td>Player 3</td>
+                            <td id="t1p3b1"></td>
+                            <td id="t1p3b2"></td>
+                            <td id="t1p3b3"></td>
+                            <td id="t1p3b4"></td>
+                            <td id="t1p3b5"></td>
+                            <td id="t1p3b6"></td>
+                            <td id="t1p3-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-4' id='player-1-4'>
+                            <td>Player 4</td>
+                            <td id="t1p4b1"></td>
+                            <td id="t1p4b2"></td>
+                            <td id="t1p4b3"></td>
+                            <td id="t1p4b4"></td>
+                            <td id="t1p4b5"></td>
+                            <td id="t1p4b6"></td>
+                            <td id="t1p4-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-5' id='player-1-5'>
+                            <td>Player 5</td>
+                            <td id="t1p5b1"></td>
+                            <td id="t1p5b2"></td>
+                            <td id="t1p5b3"></td>
+                            <td id="t1p5b4"></td>
+                            <td id="t1p5b5"></td>
+                            <td id="t1p5b6"></td>
+                            <td id="t1p5-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-6' id='player-1-6'>
+                            <td>Player 6</td>
+                            <td id="t1p6b1"></td>
+                            <td id="t1p6b2"></td>
+                            <td id="t1p6b3"></td>
+                            <td id="t1p6b4"></td>
+                            <td id="t1p6b5"></td>
+                            <td id="t1p6b6"></td>
+                            <td id="t1p6-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-7' id='player-1-7'>
+                            <td>Player 7</td>
+                            <td id="t1p7b1"></td>
+                            <td id="t1p7b2"></td>
+                            <td id="t1p7b3"></td>
+                            <td id="t1p7b4"></td>
+                            <td id="t1p7b5"></td>
+                            <td id="t1p7b6"></td>
+                            <td id="t1p7-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-8' id='player-1-8'>
+                            <td>Player 8</td>
+                            <td id="t1p8b1"></td>
+                            <td id="t1p8b2"></td>
+                            <td id="t1p8b3"></td>
+                            <td id="t1p8b4"></td>
+                            <td id="t1p8b5"></td>
+                            <td id="t1p8b6"></td>
+                            <td id="t1p8-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-9' id='player-1-9'>
+                            <td>Player 9</td>
+                            <td id="t1p9b1"></td>
+                            <td id="t1p9b2"></td>
+                            <td id="t1p9b3"></td>
+                            <td id="t1p9b4"></td>
+                            <td id="t1p9b5"></td>
+                            <td id="t1p9b6"></td>
+                            <td id="t1p9-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-10' id='player-1-10'>
+                            <td>Player 10</td>
+                            <td id="t1p10b1"></td>
+                            <td id="t1p10b2"></td>
+                            <td id="t1p10b3"></td>
+                            <td id="t1p10b4"></td>
+                            <td id="t1p10b5"></td>
+                            <td id="t1p10b6"></td>
+                            <td id="t1p10-total" class="font-weight-bold"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4 mt-5 text-center">
+                <div class='mb-4 text-center'>
+                    <button class='btn btn-success p-2' id='result'><h5>Generate Result</h5></button>
+                </div>
+
+                <div class='border-bottom'>
+                    <h4>MATCH WON BY</h4>
+                    <h2 id='wonby' class="text-success"></h2>
+                </div>
+
+                <div class="mt-3">
+                    <h4>MAN OF THE MATCH</h4>
+                    <h2 id='mom' class="text-success"></h2>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-center">
+                    <h4>Team 2 Score Board</h4>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Team 2</th>
+                            <th>B1</th>
+                            <th>B2</th>
+                            <th>B3</th>
+                            <th>B4</th>
+                            <th>B5</th>
+                            <th>B6</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='player-1' id='player-2-1'>
+                            <td>Player 1</td>
+                            <td id="t2p1b1"></td>
+                            <td id="t2p1b2"></td>
+                            <td id="t2p1b3"></td>
+                            <td id="t2p1b4"></td>
+                            <td id="t2p1b5"></td>
+                            <td id="t2p1b6"></td>
+                            <td id="t2p1-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-2' id='player-2-2'>
+                            <td>Player 2</td>
+                            <td id="t2p2b1"></td>
+                            <td id="t2p2b2"></td>
+                            <td id="t2p2b3"></td>
+                            <td id="t2p2b4"></td>
+                            <td id="t2p2b5"></td>
+                            <td id="t2p2b6"></td>
+                            <td id="t2p2-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-3' id='player-2-3'>
+                            <td>Player 3</td>
+                            <td id="t2p3b1"></td>
+                            <td id="t2p3b2"></td>
+                            <td id="t2p3b3"></td>
+                            <td id="t2p3b4"></td>
+                            <td id="t2p3b5"></td>
+                            <td id="t2p3b6"></td>
+                            <td id="t2p3-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-4' id='player-2-4'>
+                            <td>Player 4</td>
+                            <td id="t2p4b1"></td>
+                            <td id="t2p4b2"></td>
+                            <td id="t2p4b3"></td>
+                            <td id="t2p4b4"></td>
+                            <td id="t2p4b5"></td>
+                            <td id="t2p4b6"></td>
+                            <td id="t2p4-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-5' id='player-2-5'>
+                            <td>Player 5</td>
+                            <td id="t2p5b1"></td>
+                            <td id="t2p5b2"></td>
+                            <td id="t2p5b3"></td>
+                            <td id="t2p5b4"></td>
+                            <td id="t2p5b5"></td>
+                            <td id="t2p5b6"></td>
+                            <td id="t2p5-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-6' id='player-2-6'>
+                            <td>Player 6</td>
+                            <td id="t2p6b1"></td>
+                            <td id="t2p6b2"></td>
+                            <td id="t2p6b3"></td>
+                            <td id="t2p6b4"></td>
+                            <td id="t2p6b5"></td>
+                            <td id="t2p6b6"></td>
+                            <td id="t2p6-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-7' id='player-2-7'>
+                            <td>Player 7</td>
+                            <td id="t2p7b1"></td>
+                            <td id="t2p7b2"></td>
+                            <td id="t2p7b3"></td>
+                            <td id="t2p7b4"></td>
+                            <td id="t2p7b5"></td>
+                            <td id="t2p7b6"></td>
+                            <td id="t2p7-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-8' id='player-2-8'>
+                            <td>Player 8</td>
+                            <td id="t2p8b1"></td>
+                            <td id="t2p8b2"></td>
+                            <td id="t2p8b3"></td>
+                            <td id="t2p8b4"></td>
+                            <td id="t2p8b5"></td>
+                            <td id="t2p8b6"></td>
+                            <td id="t2p8-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-9' id='player-2-9'>
+                            <td>Player 9</td>
+                            <td id="t2p9b1"></td>
+                            <td id="t2p9b2"></td>
+                            <td id="t2p9b3"></td>
+                            <td id="t2p9b4"></td>
+                            <td id="t2p9b5"></td>
+                            <td id="t2p9b6"></td>
+                            <td id="t2p9-total" class="font-weight-bold"></td>
+                        </tr>
+                        <tr class='player-10' id='player-2-10'>
+                            <td>Player 10</td>
+                            <td id="t2p10b1"> </td>
+                            <td id="t2p10b2"> </td>
+                            <td id="t2p10b3"> </td>
+                            <td id="t2p10b4"> </td>
+                            <td id="t2p10b5"> </td>
+                            <td id="t2p10b6"> </td>
+                            <td id="t2p10-total" class="font-weight-bold"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
