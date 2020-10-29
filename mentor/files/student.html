@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div>
+        <h1>Hello Student</h1>
+    </div>
+
+    <div>
+        <table id="studentdata" class="table text-center">
+            <thead>
+                <th>Name</th>
+                <th>E-Mail</th>
+                <th>Subject</th>
+                <th>Company</th>
+            </thead>
+        </table>
+    </div>
+
+    <script>
+        let studentdata;
+        async function loadstudentdata() {
+            let dataraw = await fetch("http://localhost:5000/students");
+            studentdata = await dataraw.json();
+            let table = document.getElementById('studentdata');
+
+            let tbody = document.createElement('tbody');
+
+            studentdata.forEach((val) => {
+                let tr = document.createElement('tr');
+                let tdname = document.createElement('td');
+                let tdemail = document.createElement('td');
+                let tdsubject = document.createElement('td');
+                let tdcompany = document.createElement('td');
+
+                tdname.innerHTML = val.name;
+                tdemail.innerHTML = val.email;
+                tdsubject.innerHTML = val.subject;
+                tdcompany.innerHTML = val.company;
+
+                tr.append(tdname, tdemail, tdsubject, tdcompany);
+                tbody.append(tr);
+            })
+
+            table.append(tbody);
+        }
+
+        loadstudentdata();
+    </script>
+</body>
+
+</html>

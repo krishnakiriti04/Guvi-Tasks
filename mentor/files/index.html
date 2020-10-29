@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #studentform {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-3">Home Page</h1>
+
+        <div class="mb-4">
+            <form onsubmit="addmentor();return false;">
+                <fieldset>
+                    <legend>Add Mentor</legend>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Mentor Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Mentor Email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="company">Company</label>
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Company">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-info">
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+
+        <div>
+            <table id="mentordata" class="table text-center">
+                <thead>
+                    <th>Name</th>
+                    <th>E-Mail</th>
+                    <th>Subject</th>
+                    <th>Company</th>
+                </thead>
+            </table>
+        </div>
+
+        <div class="mb-4" id="studentform">
+            <form onsubmit="addstudent();return false;">
+                <fieldset>
+                    <legend>Add Student</legend>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="studentname">Name</label>
+                            <input type="text" class="form-control" id="studentname" name="studentname" placeholder="Student Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="mentor">Mentor</label>
+                            <input type="text" class="form-control" id="mentor" name="mentor" placeholder="Mentor Name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-info">
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
