@@ -17,42 +17,13 @@
         <table id="studentdata" class="table text-center">
             <thead>
                 <th>Name</th>
-                <th>E-Mail</th>
                 <th>Subject</th>
-                <th>Company</th>
+                <th>Mentor</th>
             </thead>
         </table>
     </div>
 
-    <script>
-        let studentdata;
-        async function loadstudentdata() {
-            let dataraw = await fetch("http://localhost:5000/students");
-            studentdata = await dataraw.json();
-            let table = document.getElementById('studentdata');
-
-            let tbody = document.createElement('tbody');
-
-            studentdata.forEach((val) => {
-                let tr = document.createElement('tr');
-                let tdname = document.createElement('td');
-                let tdemail = document.createElement('td');
-                let tdsubject = document.createElement('td');
-                let tdcompany = document.createElement('td');
-
-                tdname.innerHTML = val.name;
-                tdemail.innerHTML = val.email;
-                tdsubject.innerHTML = val.subject;
-                tdcompany.innerHTML = val.company;
-
-                tr.append(tdname, tdemail, tdsubject, tdcompany);
-                tbody.append(tr);
-            })
-
-            table.append(tbody);
-        }
-
-        loadstudentdata();
+    <script src="studentscript.js">
     </script>
 </body>
 

@@ -14,14 +14,16 @@ async function loaddata() {
         let tdsubject = document.createElement('td');
         let tdcompany = document.createElement('td');
         let addstudent = document.createElement('td');
+        let getstudents = document.createElement('td');
 
         tdname.innerHTML = val.name;
         tdemail.innerHTML = val.email;
         tdsubject.innerHTML = val.subject;
         tdcompany.innerHTML = val.company;
-        addstudent.innerHTML = `<button onclick="student(${val.id})" class="btn btn-success")>Add Student</button>`
+        addstudent.innerHTML = `<button onclick="student(${val.id})" class="btn btn-success">Add Student</button>`
+        getstudents.innerHTML = `<button onclick="getstudent('${val.name}')" class="btn btn-primary">All Students</button>`
 
-        tr.append(tdname, tdemail, tdsubject, tdcompany, addstudent);
+        tr.append(tdname, tdemail, tdsubject, tdcompany, addstudent, getstudents);
         tbody.append(tr);
     })
 
@@ -30,36 +32,10 @@ async function loaddata() {
 
 loaddata();
 
-let studentdata;
-async function loadstudentdata() {
-    let dataraw = await fetch("http://localhost:5000/students");
-    studentdata = await dataraw.json();
-    let table = document.getElementById('studentdata');
-
-    let tbody = document.createElement('tbody');
-
-    studentdata.forEach((val) => {
-        let tr = document.createElement('tr');
-        let tdname = document.createElement('td');
-        let tdemail = document.createElement('td');
-        let tdsubject = document.createElement('td');
-        let tdcompany = document.createElement('td');
-
-        tdname.innerHTML = val.name;
-        tdemail.innerHTML = val.email;
-        tdsubject.innerHTML = val.subject;
-        tdcompany.innerHTML = val.company;
-
-        tr.append(tdname, tdemail, tdsubject, tdcompany);
-        tbody.append(tr);
-    })
-
-    table.append(tbody);
-}
-
-//loadstudentdata();
 
 async function addmentor() {
+    document.getElementById('mentordiv').style.visibility = "hidden";
+
     let data = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
@@ -78,17 +54,19 @@ async function addmentor() {
 }
 
 
-async function student(id) {
+async function student(mentorid) {
     document.getElementById('studentform').style.visibility = "visible";
-    let mentor = mentordata.find((mentor) => mentor.id === parseInt(id));
+    let mentor = mentordata.find((mentor) => mentor.id === parseInt(mentorid));
     document.getElementById('mentor').value = mentor.name;
+    document.getElementById('studentsubject').value = mentor.subject;
     console.log(mentor.name);
 }
 
+//function to post mentor data on form submit
 async function addstudent() {
     let data = {
         name: document.getElementById('studentname').value,
-        subject: document.getElementById('subject').value,
+        subject: document.getElementById('studentsubject').value,
         mentor: document.getElementById('mentor').value
     }
 
@@ -101,4 +79,26 @@ async function addstudent() {
 
     })
     document.getElementById('studentform').style.visibility = "hidden";
+}
+
+
+async function getstudent(name) {
+    let rawdata = await fetch(`http://localhost:5000/students/${name}`);
+    let studentdata = await rawdata.json();
+
+    let ul = document.getElementById('students');
+    ul.innerHTML = '';
+
+    studentdata.forEach((student) => {
+        let li = document.createElement('li');
+        li.innerHTML = student.name;
+
+        ul.append(li);
+    });
+
+    document.getElementById('studentdetailsdiv').style.visibility = (document.getElementById('studentdetailsdiv').style.visibility === 'visible') ? 'hidden' : 'visible';
+}
+
+function mentorform() {
+    document.getElementById('mentordiv').style.visibility = "visible"
 }

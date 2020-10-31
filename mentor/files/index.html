@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        #studentform {
+        #studentform,
+        #studentdetailsdiv,
+        #mentordiv {
             visibility: hidden;
         }
     </style>
@@ -17,7 +20,21 @@
     <div class="container">
         <h1 class="text-center mb-3">Home Page</h1>
 
-        <div class="mb-4">
+        <div>
+            <table id="mentordata" class="table text-center">
+                <thead>
+                    <th>Name</th>
+                    <th>E-Mail</th>
+                    <th>Subject</th>
+                    <th>Company</th>
+                    <th>
+                        <i class="fa fa-plus-square p-0 m-0" onclick="mentorform()"></i>
+                    </th>
+                </thead>
+            </table>
+        </div>
+
+        <div class="mb-4" id="mentordiv">
             <form onsubmit="addmentor();return false;">
                 <fieldset>
                     <legend>Add Mentor</legend>
@@ -46,38 +63,32 @@
                     </div>
                 </fieldset>
             </form>
-
         </div>
 
-        <div>
-            <table id="mentordata" class="table text-center">
-                <thead>
-                    <th>Name</th>
-                    <th>E-Mail</th>
-                    <th>Subject</th>
-                    <th>Company</th>
-                </thead>
-            </table>
+        <div id='studentdetailsdiv'>
+            <ul id="students">
+
+            </ul>
         </div>
+
+
 
         <div class="mb-4" id="studentform">
             <form onsubmit="addstudent();return false;">
                 <fieldset>
                     <legend>Add Student</legend>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="studentname">Name</label>
                             <input type="text" class="form-control" id="studentname" name="studentname" placeholder="Student Name">
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="mentor">Mentor</label>
                             <input type="text" class="form-control" id="mentor" name="mentor" placeholder="Mentor Name">
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-4">
                             <label for="subject">Subject</label>
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                            <input type="text" class="form-control" id="studentsubject" name="subject" placeholder="Subject">
                         </div>
                     </div>
                     <div>
