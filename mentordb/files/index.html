@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #studentform,
+        #studentdetailsdiv,
+        #mentordiv {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-3">Mentors</h1>
+
+        <div>
+            <table id="mentordata" class="table text-center table-sm table-striped">
+                <thead class="thead-dark">
+                    <th>Name</th>
+                    <th>E-Mail</th>
+                    <th>Subject</th>
+                    <th>Company</th>
+                    <th>Delete</th>
+                    <th>Add student</th>
+                    <th>Individual Students</th>
+                    <th>
+                        <i class="fa fa-plus-square" style="font-size:24px" onclick="mentorform()"></i>
+                    </th>
+                </thead>
+            </table>
+        </div>
+
+
+        <div id='studentdetailsdiv'>
+            <ul id="students">
+
+            </ul>
+        </div>
+
+        <div class="mb-4" id="mentordiv">
+            <form onsubmit="addmentor();return false;">
+                <fieldset>
+                    <legend>Add Mentor</legend>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Mentor Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Mentor Email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="company">Company</label>
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Company">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-info">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+
+
+
+        <div class="mb-4" id="studentform">
+            <form onsubmit="addstudent();return false;">
+                <fieldset>
+                    <legend>Add Student</legend>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="studentname">Name</label>
+                            <input type="text" class="form-control" id="studentname" name="studentname" placeholder="Student Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="mentor">Mentor</label>
+                            <input type="text" class="form-control" id="mentor" name="mentor" placeholder="Mentor Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="studentsubject" name="subject" placeholder="Subject">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-info">
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
