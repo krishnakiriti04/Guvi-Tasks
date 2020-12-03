@@ -1,0 +1,72 @@
+body {
+    background: rgb(0, 0, 0);
+}
+
+.game-box {
+    position: absolute;
+    width: 60%;
+    top: 15%;
+    left: 20%;
+    margin: auto;
+    background: rgb(109, 171, 182);
+    display: table;
+}
+
+img {
+    width: 100px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.part-1,
+.part-2 {
+    text-align: center;
+    width: 40%;
+    display: table-cell;
+}
+
+.round-score {
+    margin-top: 3%;
+    font-size: 40px;
+}
+
+.winner {
+    color: crimson !important;
+}
+
+.player-text {
+    margin-top: 40px;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+.current-score {
+    background: lightcoral;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+    margin: auto;
+    margin-bottom: 4%;
+    font-size: 40px;
+}
+
+.active {
+    background: gainsboro;
+}
+
+button {
+    all: unset;
+}
+
+.buttons,
+.images {
+    margin-right: -100% !important;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+.hold {
+    margin-bottom: 5%;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>PIG Game</title>
+</head>
+
+<body>
+    <div class="boundary">
+
+        <div class="game-box">
+            <div class="part-1 active" id="player-1">
+                <div class="buttons new-game">
+                    <button onclick="gameStart()"> <i class="fas fa-plus-circle"></i> NEW GAME</button>
+                </div>
+                <div class="player-text" id="p-1">PLAYER 1</div>
+
+                <div class="round-score" id="roundScore-1">0</div>
+                <div class="images" id="dice">
+                    <img src="dice-1.png" alt="dice images">
+                </div>
+                <div class="current-score" id="currentScore-1">0</div>
+                <div class="buttons roll-dice">
+                    <button onclick="loadDice()"> <i class="fas fa-sync"></i> ROLL DICE</button>
+                </div>
+                <div class="buttons hold">
+                    <button onclick="hold()"> <i class="far fa-pause-circle"></i> HOLD</button>
+                </div>
+            </div>
+            <div class="part-2" id="player-2">
+                <div>
+                    <button></button>
+                </div>
+                <div class="player-text" id="p-2">PLAYER 2</div>
+                <div class="round-score" id="roundScore-2">0</div>
+                <div class="images hidden">
+                    <img src="dice-1.png" alt="dice">
+                </div>
+                <div class="current-score" id="currentScore-2">0</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
