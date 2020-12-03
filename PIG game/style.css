@@ -5,11 +5,24 @@ body {
 .game-box {
     position: absolute;
     width: 60%;
-    top: 15%;
+    top: 7%;
     left: 20%;
     margin: auto;
     background: rgb(109, 171, 182);
     display: table;
+}
+
+.rules {
+    top: 82%;
+    position: absolute;
+    left: 20% !important;
+    color: rgb(255, 255, 255);
+}
+
+.boundary {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
 
 img {
